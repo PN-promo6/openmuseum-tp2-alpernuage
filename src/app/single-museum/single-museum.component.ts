@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MuseumListService } from '../services/museumList.service';
+import { DataService } from '../services/data.service';
 import { Museum } from '../models/museum/museum';
 
 @Component({
@@ -19,7 +19,7 @@ export class SingleMuseumComponent implements OnInit {
   // @Input() museumWebSite: string;
   // @Input() museumOpening: string;
 
-  constructor(private museumListService: MuseumListService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }

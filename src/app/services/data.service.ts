@@ -15,4 +15,8 @@ export class DataService {
     return museumsObservable;
   }
 
+  public fetchMuseumById(museum_id: string): Observable<Museum[]> {
+    let museumsIdObservable: Observable<Museum[]> = this.httpClient.get<Museum[]>('http://localhost:3000/museums/' + museum_id);
+    return museumsIdObservable;
+  }
 }

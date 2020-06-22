@@ -23,6 +23,7 @@ const Schema = mongoose.Schema;
 
 // Création du schéma correspondant aux documents contenus dans la collection "museums”
 const MuseumSchema = new Schema({
+  id: String,
   opening: String,
   name: String,
   night_time: String,

@@ -1,7 +1,7 @@
 <!-- museum detail -->
 <div class="row">
   <div class="col-3 mb-3">
-    <h1>🏛️ {{museumName}}</h1>
+    <h1>🏛️ {{museum.name}}</h1>
 
     <app-map></app-map>
 
@@ -19,8 +19,8 @@
           </div>
           <div class="col-10">
             <p class="card-text">
-              {{museumAdress}}<br>
-              {{museumZipCode}} {{museumCity | titlecase}}
+              {{museum.address}}<br>
+              {{museum.cp}} {{museum.city | titlecase}}
             </p>
           </div>
         </div>
@@ -30,7 +30,10 @@
             📞
           </div>
           <div class="col-10">
-            <p class="card-text"><a href="tel:{{museumPhone}}">{{museumPhone}}</a></p>
+            <p class="card-text"><a href="tel:{{museum.telephone}}">{{museum.telephone}}</a></p>
+          </div>
+          <div class="col-10">
+            <p class="card-text"><a href="tel:{{museum.telephone}}">{{museum.fax}}</a></p>
           </div>
         </div>
         <!-- Website -->
@@ -40,7 +43,7 @@
           </div>
           <div class="col-10">
             <p class="card-text">
-              <a href="https://{{museumWebSite}}" target="blank">{{museumWebSite}}</a>
+              <a href="https://{{museum.website}}" target="blank">{{museum.website}}</a>
             </p>
           </div>
         </div>
@@ -50,7 +53,7 @@
             🕒
           </div>
           <div class="col-10">
-            <p class="card-text">{{museumOpening}}</p>
+            <p class="card-text">{{museum.opening}}</p>
           </div>
         </div>
         <!-- View detail -->
@@ -75,4 +78,4 @@
     </div>
   </div>
 </div>
-<h2 class="h2">{{museumName}}</h2>
+<h2 class="h2">{{museum.name}}</h2>
